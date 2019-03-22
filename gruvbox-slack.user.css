@@ -6,100 +6,124 @@
 @preprocessor   default
 @author         Xedecimal
 @updateURL      https://raw.githubusercontent.com/Xedecimal/userstyles/master/gruvbox-slack.user.css
-@var color color-text           "Text"                  #EBDBB2
-@var color color-text-dark      "Text Dark"             #D5C4A1
+@var color color-text           "Text"                  #FBF1C7
+@var color color-text-dark      "Text Dark"             #32302f
 @var color color-back           "Background"            #282828
 @var color color-back-dark      "Background Dark"       #1D2021
 @var color color-back-bright    "Background Bright"     #3C3836
-@var color color-highlight      "Highlight"             #98971A
-@var color color-notification   "Notification"          #D79921
+@var color color-highlight      "Highlight"             #FB4934
+@var color color-notification   "Notification"          #B8BB26
 
 ==/UserStyle== */
 
 @-moz-document domain("slack.com") {
 
-/* Generic */
+    /* Generic */
 
-body, .c-message__body, .p-message_pane .c-message_list.c-virtual_list--scrollbar>.c-scrollbar__hider, .p-message_pane .c-message_list:not(.c-virtual_list--scrollbar) {
-    background: var(--color-back);
-    color: var(--color-text);
-}
+    body, .c-message__body, .p-message_pane .c-message_list.c-virtual_list--scrollbar>.c-scrollbar__hider, .p-message_pane .c-message_list:not(.c-virtual_list--scrollbar) {
+        background: var(--color-back);
+        color: var(--color-text);
+    }
 
-a, a:link, a:visited, .p-channel_sidebar__channel, .p-channel_sidebar__link, .p-channel_sidebar__channel:link, .p-channel_sidebar__link:link, .p-channel_sidebar__channel:visited, .p-channel_sidebar__link:visited, .p-channel_sidebar__channel:hover, .p-channel_sidebar__link:hover {
-    color: var(--color-highlight);
-}
+    a, a:link, a:visited, .p-channel_sidebar__channel, .p-channel_sidebar__link, .p-channel_sidebar__channel:link, .p-channel_sidebar__link:link, .p-channel_sidebar__channel:visited, .p-channel_sidebar__link:visited, .p-channel_sidebar__channel:hover, .p-channel_sidebar__link:hover {
+        color: var(--color-text);
+    }
 
-pre {
-    background: var(--color-back-dark);
-    color: var(--color-text-dark);
-}
+    pre {
+        background: var(--color-back-dark);
+        color: var(--color-text-dark);
+    }
 
-/* Sidebar */
+    /* Sidebar */
 
-[lang] .p-channel_sidebar:not(.p-channel_sidebar--global_nav):not(.p-channel_sidebar--classic_nav), .client_channels_list_container {
-    background: var(--color-back);
-}
+    [lang] .p-channel_sidebar:not(.p-channel_sidebar--global_nav):not(.p-channel_sidebar--classic_nav), .client_channels_list_container {
+        background: var(--color-back);
+    }
 
-.p-channel_sidebar {
-    color: var(--color-text-dark);
-}
+    .p-channel_sidebar {
+        color: var(--color-text);
+    }
 
-/* Right Side */
+    /* Highlight */
 
-.channel_header, #edit_topic_inner:not(.cannot_edit_topic):before, .c-message_list__day_divider__label__pill {
-    background: var(--color-back-bright);
-    color: var(--color-notification);
-}
+    .p-channel_sidebar__channel--unread:not(.p-channel_sidebar__channel--muted):not(.p-channel_sidebar__channel--suggested):not(.p-channel_sidebar__channel--selected) .p-channel_sidebar__name, .p-channel_sidebar__link--unread:not(.p-channel_sidebar__link--selected) .p-channel_sidebar__name, .p-channel_sidebar__link--invites:not(.p-channel_sidebar__link--dim) .p-channel_sidebar__name, .p-channel_sidebar__section_heading_label--clickable:hover, .p-channel_sidebar__section_heading_label--unreads, .p-channel_sidebar__quickswitcher:hover {
+        color: var(--color-notification);
+    }
 
-.channel_title .channel_name button {
-    color: var(--color-text);
-}
+    /* Right Side */
 
-.p-message_pane .c-message_list.c-virtual_list--scrollbar>.c-scrollbar__hider:before, .p-message_pane .c-message_list:not(.c-virtual_list--scrollbar):before {
-    background: var(--color-back-bright);
-}
+    .channel_header, #edit_topic_inner:not(.cannot_edit_topic):before, .c-message_list__day_divider__label__pill {
+        background: var(--color-back-bright);
+        color: var(--color-notification);
+    }
 
-/* New Messages */
+    .channel_title .channel_name button {
+        color: var(--color-text);
+    }
 
-.c-message_list__unread_divider__separator {
-    border-color: var(--color-highlight);
-}
+    .p-message_pane .c-message_list.c-virtual_list--scrollbar>.c-scrollbar__hider:before, .p-message_pane .c-message_list:not(.c-virtual_list--scrollbar):before {
+        background: var(--color-back-bright);
+    }
 
-.c-message_list__unread_divider__label {
-    color: var(--color-highlight);
-    background: var(--color-back-bright);
-}
+    .c-message_attachment {
+        color: var(--color-text);
+    }
+    
+    /* New Messages */
 
-/* Sender */
+    .c-message_list__unread_divider__separator, .c-message_list__day_divider__line {
+        border-color: var(--color-text-dark);
+    }
 
-.c-message--light .c-message__sender .c-message__sender_link {
-    color: var(--color-highlight);
-}
+    .c-message_list__unread_divider__label {
+        color: var(--color-notification);
+        background: var(--color-text-dark);
+    }
 
-.c-member_slug--link, .c-mrkdwn__broadcast--mention, .c-mrkdwn__broadcast--mention:hover, .c-mrkdwn__highlight, .c-mrkdwn__mention, .c-mrkdwn__mention:hover, .c-mrkdwn__user_group--mention, .c-mrkdwn__user_group--mention:hover {
-    background: var(--color-back-bright);
-}
+    /* Sender */
 
-#footer {
-    background: var(--color-back);
-}
+    .c-message--light .c-message__sender .c-message__sender_link {
+        color: var(--color-text);
+    }
 
-#primary_file_button {
-    background: var(--color-back-bright);
-}
+    /* Mention */
 
-#msg_input, .texty_legacy.texty_single_line_input, .search_form {
-    color: var(--color-text);
-    background: var(--color-back-dark);
-}
+    .c-member_slug--link, .c-mrkdwn__broadcast--mention, .c-mrkdwn__broadcast--mention:hover, .c-mrkdwn__highlight, .c-mrkdwn__mention, .c-mrkdwn__mention:hover, .c-mrkdwn__user_group--mention, .c-mrkdwn__user_group--mention:hover {
+        background: var(--color-back-bright);
+    }
 
-.texty_legacy .ql-placeholder {
-    color: var(--color-text);
-}
+    #footer {
+        background: var(--color-back);
+        box-shadow: inset 1px 0 0 0 var(--color-text-dark);
+    }
 
-/* Hover Colors */
+    #primary_file_button {
+        background: var(--color-back-bright);
+    }
 
-.c-message--focus:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight), .c-message--hover:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight), .c-message:hover:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight) {
-    background: var(--color-back-bright);
-}
+    #msg_input, .texty_legacy.texty_single_line_input, .search_form {
+        color: var(--color-text);
+        background: var(--color-back-dark);
+    }
+
+    .texty_legacy .ql-placeholder {
+        color: var(--color-text);
+    }
+
+    /* Hover Colors */
+
+    .c-message--focus:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight), .c-message--hover:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight), .c-message:hover:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight) {
+        background: var(--color-back-bright);
+    }
+    
+    /* Misc Stuff */
+    
+    /* Get rid of the borders... */
+    .channel_header, #col_messages, #client_body:not(.onboarding):not(.feature_global_nav_layout):before {
+        box-shadow: inset 1px 0 0 0 var(--color-text-dark);
+    }
+    
+    #client_body:not(.onboarding):not(.feature_global_nav_layout):before {
+        background: var(--color-text-dark);
+    }
 }
