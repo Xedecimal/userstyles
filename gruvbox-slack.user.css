@@ -1,5 +1,5 @@
 /* ==UserStyle==
-@name           New Slack
+@name           GruvBox - Slack
 @namespace      github.com/Xedecimal/userstyles
 @version        1.0.0
 @description    Customizable Slack with some default gruvbox colors.
@@ -96,6 +96,12 @@
         background: var(--color-back-dark);
     }
 
+    /* Bot Message */
+    .c-message--ephemeral, .c-message--sli_highlight_negative,
+    .c-message--ephemeral, .c-message--ephemeral .c-message__body {
+        background: var(--color-back-dark);
+    }
+    
     /* Sender */
 
     .c-message--light .c-message__sender .c-message__sender_link {
