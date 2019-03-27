@@ -1,0 +1,41 @@
+/* ==UserStyle==
+@name           GruvBox - Google
+@namespace      github.com/Xedecimal/userstyles
+@version        1.0.0
+@description    Google... Gruvbox style
+@preprocessor   stylus
+@author         Xedecimal
+@updateURL      https://raw.githubusercontent.com/Xedecimal/userstyles/master/gruvbox-google.user.styl
+@homepageURL    https://github.com/Xedecimal/userstyles
+@var color color-text           "Text"                  #EBDBB2
+@var color color-text-light     "Text Light"            #FBF1C7
+@var color color-text-dark      "Text Dark"             #928374
+@var color color-back           "Background"            #282828
+@var color color-back-dark      "Background Dark"       #1D2021
+@var color color-back-light     "Background Bright"     #3C3836
+@var color color-highlight      "Highlight"             #FB4934
+@var color color-notification   "Notification"          #B8BB26
+
+==/UserStyle== */
+@-moz-document domain("www.google.com")
+    body, #hdtbSum, #appbar
+        color: color-text
+        background: color-back
+    a:link, .w, #prs a:visited, #prs a:active, .q:active, .q:visited, .kl:active, .tbotu
+        color: color-text
+    .mblink:visited, a:visited
+        color: color-text-dark
+    .gLFyf
+        color: color-text
+    .sbct:first-child .suggestions-inner-container, .RNNXgb
+        border: none;
+    .aajZCb, .sbl1, .RNNXgb, .sbhl
+        color: color-text
+        background: color-back-dark
+    .minidiv .sfbg
+        background: color-back-dark
+    #hdtb
+        border: none;
+    // Icons
+    .gb_0b
+        filter: invert(1)
