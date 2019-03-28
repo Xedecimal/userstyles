@@ -2,7 +2,7 @@
 @name           GruvBox - Google
 @namespace      github.com/Xedecimal/userstyles
 @version        1.0.0
-@description    Google... Gruvbox style
+@description    Customizable Slack with some default gruvbox colors.
 @preprocessor   stylus
 @author         Xedecimal
 @updateURL      https://raw.githubusercontent.com/Xedecimal/userstyles/master/gruvbox-google.user.styl
@@ -21,11 +21,17 @@
     body, #hdtbSum, #appbar
         color: color-text
         background: color-back
-    a:link, .w, #prs a:visited, #prs a:active, .q:active, .q:visited, .kl:active, .tbotu
-        color: color-text
+    // Links
+    a:link, .w, #prs a:visited, #prs a:active, .q:active, .q:visited, .kl:active, .tbotu, a.fl:link, .fl a, .flt, a.flt, .gl a:link, a.mblink, .mblink b, .i3LlFf, .kno-ecr-pt, .w8qArf .fl
+        color: color-text-light !important
+    // Visited Links
     .mblink:visited, a:visited
         color: color-text-dark
-    .gLFyf
+    // Cards
+    .cv2VAd, .kp-blk
+        background-color: color-back-dark
+        border-color: color-back-light
+    .gLFyf, .i29hTd .qLLird
         color: color-text
     .sbct:first-child .suggestions-inner-container, .RNNXgb
         border: none;
@@ -36,6 +42,9 @@
         background: color-back-dark
     #hdtb
         border: none;
+    // Arrow Down
+    .GHDvEf, .GHDvEf:hover, .GHDvEf.selected, .GHDvEf.selected:hover
+        background: color-back
     // Icons
     .gb_0b
         filter: invert(1)
