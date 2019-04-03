@@ -9,6 +9,7 @@
 @updateURL      https://raw.githubusercontent.com/Xedecimal/userstyles/master/gruvbox-slack.user.styl
 @homepageURL    https://github.com/Xedecimal/userstyles
 @var color color-text           "Text"                  #BDAE93
+@var color color-text-light     "Text Light"            #FBF1C7
 @var color color-text-dark      "Text Dark"             #A89984
 @var color color-back           "Background"            #282828
 @var color color-back-dark      "Background Dark"       #1D2021
@@ -22,13 +23,13 @@
 @-moz-document domain("slack.com")
     /* Generic */
 
-    body, .c-message__body, .p-message_pane .c-message_list.c-virtual_list--scrollbar>.c-scrollbar__hider, .p-message_pane .c-message_list:not(.c-virtual_list--scrollbar)
+    body, .c-message__body, .p-message_pane .c-message_list.c-virtual_list--scrollbar>.c-scrollbar__hider, .p-message_pane .c-message_list:not(.c-virtual_list--scrollbar), .unread_empty_state
         font-family: 'Open Sans'
         background: color-back
         color: color-text
 
-    a, a:link, a:visited, .p-channel_sidebar__channel, .p-channel_sidebar__link, .p-channel_sidebar__channel:link, .p-channel_sidebar__link:link, .p-channel_sidebar__channel:visited, .p-channel_sidebar__link:visited, .p-channel_sidebar__channel:hover, .p-channel_sidebar__link:hover
-        color: color-text
+    a, a:link, a:visited, .p-channel_sidebar__channel, .p-channel_sidebar__link, .p-channel_sidebar__channel:link, .p-channel_sidebar__link:link, .p-channel_sidebar__channel:visited, .p-channel_sidebar__link:visited, .p-channel_sidebar__channel:hover, .p-channel_sidebar__link:hover, .channel_title .channel_name
+        color: color-text-light
 
     pre, code
         border-color: color-back-light
