@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GruvBox - Gmail
 @namespace      github.com/Xedecimal/userstyles
-@version        1.0.2
+@version        1.1.0
 @description    Gmail... Gruvbox style.
 @preprocessor   stylus
 @author         Xedecimal
@@ -18,72 +18,115 @@
 @var color color-notification   "Notification"          #B8BB26
 
 ==/UserStyle== */
-@-moz-document domain("mail.google.com") {
-    body, input, .aAT, .aAU, .w-asV.aiw, .nH .if, .nH .bkL, .aeJ, .yO, .bhZ.bym, .bhZ.bjB, .IG, .GQ, .Ap, .aoP .Ar, .Am, .aDg>.aDj, .iY .Bu, .aaZ, .vO, .aoT {
+@-moz-document domain("mail.google.com")
+    body()
         background: color-back
         color: color-text
-    }
 
-    .hx, .hx .gD, .ha>.hP, .gb_ja svg, .y2, .TO .nU>.n0, .TO.NQ .nU>.n0, .TO.nZ .nU>.n0, .ah9>.CJ, .n3>.CL>.CK, .gt a, .go, .ig .g3, .hI .g3, .iv .g3, .hx .hb {
-        color: color-text
-    }
+    compose-icon()
+        background-color: color-back-dark
+        color: color-text-light
 
-    /* Links */
+    compose-inline()
+        border-color: color-back-light
 
-    .ac2, .ig .gD, .hI .gD, .iv .gD, .iv .hb, .iv .g2, .ig .g6, .J-JN-M-I, .J-JN-M-I.J-JN-M-I-JW {
-        color: color-text-light;
-    }
-    
-    /* Unread */
+    icon()
+        filter: invert(1)
+        
+    link()
+        color: color-text-light
 
-    .zE {
-        background: color-back
-        color: color-text
-    }
-    
-    /* Notification */
-    
-    .Tm .ya, div.ajR {
-        background: color-back-dark
-        color: color-notification
-    }
-    
-    .zA>.PE.PF::before {
-        background: color-notification
-    }
-    
-    /* Quick Buttons */
-    
-    .dF .dG, .nr, .Ar {
+    mail-bottom-buttons()
         background: none
-    }
 
-    .amn>.ams, .bxX, .btA .btz.T-I-ax7, .btA .Uo {
+    mail-bottom-button()
         background: color-back-dark
         color: color-text
         border-color: color-back
         box-shadow: inset 0 0 0 1px color-back-dark
-    }
     
-    /* Selected Mail */
-    
-    .x7 {
+    mail-checked()
         color: color-notification
         background: color-back
-    }
-
-    /* Icons */
-    .ams.bkH::before, .ams.bkG::before, .asa, .qj, .bqX, .xY>.T-Jo, td.apU>.T-KT.aXw::before, .G-tF .T-Jo, .G-asx, .d-Na-J3.d-Na-JX-ax3.d-Na-hFsbo, .adj, .amI, .adk, .amJ, .aBS .d-Na-JX-I .d-Na-J3, .og.T-I-J3, .Xv.T-I.J-JN-M-I>.J-JN-M-I-JG, .aMZ.a3G, .a8X>.bAK, .dv, .bi4>.T-KT:not(.T-KT-Jp):not(.byM)::before, .hB, .mL, .g1, .gZ, .ajy>.ajz, div.ajR .ajT, .az2 .J-JN-M-I-JG {
-        filter: invert(1)
-    }
         
-    /* Compose Icon */
-    .z0>.L3 {
-        background-color: color-back-light
-    }
-    
-    .z0>.L3:hover, .z0>.L3:focus {
+    mail-focus()
+        background: color-notification
+
+    notification()
+        background: color-back-dark
+        color: color-notification
+
+    search()
+        background: color-back-dark
+
+    sidebar-hover()
+        background: color-back-light
+
+    sidebar-selected()
+        color: color-text-light
+        font-weight: normal;
+        sidebar-hover()
+
+    tag()
+        background: color-back-dark !important
+        color: color-text-dark !important
+        
+    text()
         color: color-text
-        background-color: color-back-dark
-    }
-}
+
+    unread()
+        background: color-back
+        color: color-text
+        
+    body, input, .aAT, .aAU, .w-asV.aiw, .nH .if, .nH .bkL, .aeJ, .yO, .bhZ.bym, .bhZ.bjB, .IG, .GQ, .Ap, .aoP .Ar, .Am, .aDg>.aDj, .iY .Bu, .aaZ, .vO, .aoT
+        body()
+
+    .hx, .hx .gD, .ha>.hP, .gb_ja svg, .y2, .TO .nU>.n0, .TO.NQ .nU>.n0, .TO.nZ .nU>.n0, .ah9>.CJ, .n3>.CL>.CK, .gt a, .go, .ig .g3, .hI .g3, .iv .g3, .hx .hb
+        text()
+            
+    .ac2, .ig .gD, .hI .gD, .iv .gD, .iv .hb, .iv .g2, .ig .g6, .J-JN-M-I, .J-JN-M-I.J-JN-M-I-JW
+        link()
+    
+    .zE
+        unread()
+
+    .gb_ne.gb_la
+        search()
+
+    .Tm .ya, div.ajR
+        notification()
+    
+    .dF .dG, .nr, .Ar
+        mail-bottom-buttons()
+
+    .amn>.ams, .bxX, .btA .btz.T-I-ax7, .btA .Uo
+        mail-bottom-button()
+    
+    .HM .I5
+        compose-inline()
+    
+    .x7
+        mail-checked()
+
+    .ams.bkH::before, .ams.bkG::before, .asa, .qj, .bqX, .xY>.T-Jo, td.apU>.T-KT.aXw::before, .G-tF .T-Jo, .G-asx, .d-Na-J3.d-Na-JX-ax3.d-Na-hFsbo, .adj, .amI, .adk, .amJ, .aBS .d-Na-JX-I .d-Na-J3, .og.T-I-J3, .Xv.T-I.J-JN-M-I>.J-JN-M-I-JG, .aMZ.a3G, .a8X>.bAK, .dv, .bi4>.T-KT:not(.T-KT-Jp):not(.byM)::before, .hB, .mL, .g1, .gZ, .ajy>.ajz, div.ajR .ajT, .az2 .J-JN-M-I-JG, .ams.bkI::before
+        icon()
+
+    .zA>.PE.PF::before
+        mail-focus()
+
+    .z0>.L3
+        compose-icon()
+
+    .hU.hM, .hV.hM
+        tag()
+
+    .wT>.n3 .byl:first-child .aim:first-child .nZ, .byl .TO.nZ>.aHS-bnt .n0, .nZ>.aHS-bnt .bsU
+        sidebar-selected()
+        
+    .TO.NQ, .n6 .ah9:hover, .n6 .ah9.aiu:hover, .n6 .ah9:focus, .CL.NQ, .CL:hover, .CL:focus
+        sidebar-hover()
+        
+    .z0>.L3:hover, .z0>.L3:focus
+        color: color-text
+        //background-color: color-back-dark
+        background-color: #F0F
