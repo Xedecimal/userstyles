@@ -2,15 +2,15 @@
 @name           GruvBox - Slack
 @namespace      github.com/Xedecimal/userstyles
 @version        1.0.2
-@description    Customizable Slack with some default gruvbox colors.
+@description    Slack... Gruvbox style.
 @preprocessor   stylus
 @author         Xedecimal
 @license        WTFPL
 @updateURL      https://raw.githubusercontent.com/Xedecimal/userstyles/master/gruvbox-slack.user.styl
 @homepageURL    https://github.com/Xedecimal/userstyles
 @var color color-text           "Text"                  #BDAE93
-@var color color-text-light     "Text Light"            #FBF1C7
 @var color color-text-dark      "Text Dark"             #A89984
+@var color color-text-light     "Text Light"            #FBF1C7
 @var color color-back           "Background"            #282828
 @var color color-back-dark      "Background Dark"       #1D2021
 @var color color-back-light     "Background Bright"     #3C3836
@@ -19,8 +19,9 @@
 
 ==/UserStyle== */
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans')
 @-moz-document domain("slack.com")
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans')
+
     /* Generic */
 
     body, .c-message__body, .p-message_pane .c-message_list.c-virtual_list--scrollbar>.c-scrollbar__hider, .p-message_pane .c-message_list:not(.c-virtual_list--scrollbar), .unread_empty_state
