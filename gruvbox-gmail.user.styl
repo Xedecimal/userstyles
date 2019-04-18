@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GruvBox - Gmail
 @namespace      github.com/Xedecimal/userstyles
-@version        1.1.0
+@version        1.1.1
 @description    Gmail... Gruvbox style.
 @preprocessor   stylus
 @author         Xedecimal
@@ -35,6 +35,9 @@
         
     link()
         color: color-text-light
+        
+    mail-body()
+        color: color-text !important
 
     mail-bottom-buttons()
         background: none
@@ -83,7 +86,7 @@
 
     .hx, .hx .gD, .ha>.hP, .gb_ja svg, .y2, .TO .nU>.n0, .TO.NQ .nU>.n0, .TO.nZ .nU>.n0, .ah9>.CJ, .n3>.CL>.CK, .gt a, .go, .ig .g3, .hI .g3, .iv .g3, .hx .hb
         text()
-            
+        
     .ac2, .ig .gD, .hI .gD, .iv .gD, .iv .hb, .iv .g2, .ig .g6, .J-JN-M-I, .J-JN-M-I.J-JN-M-I-JW
         link()
     
@@ -96,6 +99,9 @@
     .Tm .ya, div.ajR
         notification()
     
+    .nH.aHU, .nH.aHU *
+        mail-body()
+
     .dF .dG, .nr, .Ar
         mail-bottom-buttons()
 
