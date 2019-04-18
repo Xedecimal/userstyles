@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GruvBox - Gmail
 @namespace      github.com/Xedecimal/userstyles
-@version        1.1.1
+@version        1.1.2
 @description    Gmail... Gruvbox style.
 @preprocessor   stylus
 @author         Xedecimal
@@ -26,6 +26,9 @@
     compose-icon()
         background-color: color-back-dark
         color: color-text-light
+        
+    compose-icon-hover()
+        compose-icon()
 
     compose-inline()
         border-color: color-back-light
@@ -123,6 +126,9 @@
     .z0>.L3
         compose-icon()
 
+    .z0>.L3:hover, .z0>.L3:focus
+        compose-icon-hover()
+
     .hU.hM, .hV.hM
         tag()
 
@@ -131,8 +137,3 @@
         
     .TO.NQ, .n6 .ah9:hover, .n6 .ah9.aiu:hover, .n6 .ah9:focus, .CL.NQ, .CL:hover, .CL:focus
         sidebar-hover()
-        
-    .z0>.L3:hover, .z0>.L3:focus
-        color: color-text
-        //background-color: color-back-dark
-        background-color: #F0F
