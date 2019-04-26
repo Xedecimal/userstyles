@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GruvBox - Gmail
 @namespace      github.com/Xedecimal/userstyles
-@version        1.1.4
+@version        1.1.5
 @description    Gmail... Gruvbox style.
 @preprocessor   stylus
 @author         Xedecimal
@@ -31,6 +31,11 @@
         compose-icon()
 
     compose-inline()
+        background: color-back-dark;
+        border-color: color-back-light
+        
+    compose-inline-footer()
+        background: color-back
         border-color: color-back-light
 
     icon()
@@ -114,7 +119,10 @@
     
     .HM .I5
         compose-inline()
-    
+
+    .HM .aDi::after, .aC3, .HM .aDi::before
+        compose-inline-footer()
+        
     .x7
         mail-checked()
 
