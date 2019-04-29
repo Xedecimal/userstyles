@@ -1,0 +1,83 @@
+/* ==UserStyle==
+@name           GruvBox - Youtube
+@namespace      github.com/Xedecimal/userstyles
+@version        1.0.0
+@description    Youtube... Gruvbox style.
+@preprocessor   stylus
+@author         Xedecimal
+@license        WTFPL
+@updateURL      https://raw.githubusercontent.com/Xedecimal/userstyles/master/gruvbox-youtube.user.styl
+@homepageURL    https://github.com/Xedecimal/userstyles
+@var color color-text           "Text"                  #BDAE93
+@var color color-text-dark      "Text Dark"             #A89984
+@var color color-text-light     "Text Light"            #FBF1C7
+@var color color-back           "Background"            #282828
+@var color color-back-dark      "Background Dark"       #1D2021
+@var color color-back-light     "Background Bright"     #3C3836
+@var color color-highlight      "Highlight"             #FB4934
+@var color color-notification   "Notification"          #B8BB26
+
+==/UserStyle== */
+
+@-moz-document domain("youtube.com")
+    body()
+        color: color-text
+        background: color-back
+
+    card()
+        color: color-text-dark
+        background: color-back-dark
+        
+    card-title()
+        color: color-text-light
+
+    comment-text()
+        body()
+            
+    comment-author()
+        link()
+
+    title()
+        color: color-text
+
+    link()
+        color: color-text-light
+
+    link-visited()
+        color: color-text
+        
+    video-title()
+        link()
+            
+    video-summary()
+        body()
+
+    body, ytd-app, ytd-masthead, #guide-content.ytd-app, #columns.ytd-watch-flexy
+        body()
+
+    #metadata-line.ytd-grid-video-renderer, #byline.ytd-video-meta-block
+        video-summary()
+
+    ytd-grid-video-renderer #video-title.yt-simple-endpoint.ytd-grid-video-renderer, #endpoint.yt-simple-endpoint.ytd-guide-entry-renderer
+        video-title()
+        
+    a, h3.ytd-compact-video-renderer
+        link()
+
+    #title.ytd-shelf-renderer, .title.ytd-video-primary-info-renderer
+        title()
+            
+    yt-formatted-string[has-link-only_]:not([force-default-style]) a.yt-simple-endpoint.yt-formatted-string
+        link-visited()
+        
+    ytd-post-renderer[surface_="backstage-surface-type-home"], ytd-post-renderer[surface_="backstage-surface-type-home"] #home-content-text.ytd-post-renderer
+        card()
+
+    ytd-post-renderer[surface_="backstage-surface-type-home"] #author-text.yt-simple-endpoint.ytd-post-renderer
+        card-title()
+        
+    #content-text.ytd-comment-renderer
+        comment-text()
+        
+    #author-text.yt-simple-endpoint.ytd-comment-renderer
+        comment-author()
