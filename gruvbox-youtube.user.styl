@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GruvBox - Youtube
 @namespace      github.com/Xedecimal/userstyles
-@version        1.0.0
+@version        1.0.1
 @description    Youtube... Gruvbox style.
 @preprocessor   stylus
 @author         Xedecimal
@@ -42,6 +42,12 @@
 
     link()
         color: color-text-light
+        
+    link-active()
+        color: color-notification
+    
+    link-left()
+        link()
 
     link-visited()
         color: color-text
@@ -63,6 +69,12 @@
         
     a, h3.ytd-compact-video-renderer
         link()
+            
+    ytd-guide-entry-renderer[is-guide-refresh][is-primary][active] .title.ytd-guide-entry-renderer
+        link-active()
+            
+    ytd-guide-entry-renderer[is-guide-refresh][is-primary] .title.ytd-guide-entry-renderer, ytd-guide-entry-renderer[is-guide-refresh] #endpoint.yt-simple-endpoint.ytd-guide-entry-renderer
+        link-left()
 
     #title.ytd-shelf-renderer, .title.ytd-video-primary-info-renderer
         title()
