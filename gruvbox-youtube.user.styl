@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GruvBox - Youtube
 @namespace      github.com/Xedecimal/userstyles
-@version        1.0.1
+@version        1.0.2
 @description    Youtube... Gruvbox style.
 @preprocessor   stylus
 @author         Xedecimal
@@ -40,6 +40,9 @@
     title()
         color: color-text
 
+    icon()
+        color: color-text-light
+        
     link()
         color: color-text-light
         
@@ -51,7 +54,20 @@
 
     link-visited()
         color: color-text
+
+    logo-text()
+        fill: color-text
         
+    search()
+        background: color-back-dark
+        border: none
+        box-shadow: none
+        
+    search-icon()
+        color: #f0f
+        background: color-back-light
+        border: none
+
     video-title()
         link()
             
@@ -64,7 +80,7 @@
     #metadata-line.ytd-grid-video-renderer, #byline.ytd-video-meta-block
         video-summary()
 
-    ytd-grid-video-renderer #video-title.yt-simple-endpoint.ytd-grid-video-renderer, #endpoint.yt-simple-endpoint.ytd-guide-entry-renderer
+    ytd-grid-video-renderer #video-title.yt-simple-endpoint.ytd-grid-video-renderer, #endpoint.yt-simple-endpoint.ytd-guide-entry-renderer, #video-title.ytd-video-renderer
         video-title()
         
     a, h3.ytd-compact-video-renderer
@@ -93,3 +109,15 @@
         
     #author-text.yt-simple-endpoint.ytd-comment-renderer
         comment-author()
+        
+    #logo-red-icon-container.ytd-topbar-logo-renderer #youtube-red-paths.ytd-topbar-logo-renderer path.ytd-topbar-logo-renderer
+        logo-text()
+        
+    ytd-searchbox[mode=legacy] #container.ytd-searchbox, ytd-searchbox[mode=legacy-centered] #container.ytd-searchbox
+        search()
+        
+    #search-icon-legacy.ytd-searchbox
+        search-icon()
+
+    .yt-icon
+        icon()
