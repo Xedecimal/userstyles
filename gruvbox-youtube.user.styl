@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GruvBox - Youtube
 @namespace      github.com/Xedecimal/userstyles
-@version        1.0.2
+@version        1.0.3
 @description    Youtube... Gruvbox style.
 @preprocessor   stylus
 @author         Xedecimal
@@ -31,6 +31,9 @@
     card-title()
         color: color-text-light
 
+    channel-banner()
+        background: none
+
     comment-text()
         body()
             
@@ -39,6 +42,9 @@
 
     title()
         color: color-text
+        
+    title-sub()
+        color: color-text-dark
 
     icon()
         color: color-text-light
@@ -58,6 +64,9 @@
     logo-text()
         fill: color-text
         
+    placeholder()
+        color: color-text-dark
+        
     search()
         background: color-back-dark
         border: none
@@ -74,7 +83,7 @@
     video-summary()
         body()
 
-    body, ytd-app, ytd-masthead, #guide-content.ytd-app, #columns.ytd-watch-flexy
+    body, ytd-app, ytd-masthead, #guide-content.ytd-app, #columns.ytd-watch-flexy, ytd-browse[page-subtype="channels"], .content.ytd-video-secondary-info-renderer
         body()
 
     #metadata-line.ytd-grid-video-renderer, #byline.ytd-video-meta-block
@@ -82,8 +91,8 @@
 
     ytd-grid-video-renderer #video-title.yt-simple-endpoint.ytd-grid-video-renderer, #endpoint.yt-simple-endpoint.ytd-guide-entry-renderer, #video-title.ytd-video-renderer
         video-title()
-        
-    a, h3.ytd-compact-video-renderer
+
+    a, h3.ytd-compact-video-renderer, .more-button.ytd-video-secondary-info-renderer, .less-button.ytd-video-secondary-info-renderer
         link()
             
     ytd-guide-entry-renderer[is-guide-refresh][is-primary][active] .title.ytd-guide-entry-renderer
@@ -92,9 +101,15 @@
     ytd-guide-entry-renderer[is-guide-refresh][is-primary] .title.ytd-guide-entry-renderer, ytd-guide-entry-renderer[is-guide-refresh] #endpoint.yt-simple-endpoint.ytd-guide-entry-renderer
         link-left()
 
-    #title.ytd-shelf-renderer, .title.ytd-video-primary-info-renderer
+    #title.ytd-shelf-renderer, .title.ytd-video-primary-info-renderer, #upnext.ytd-compact-autoplay-renderer, yt-formatted-string.ytd-comments-header-renderer, #channel-title.ytd-c4-tabbed-header-renderer
         title()
-            
+
+    .date.ytd-video-secondary-info-renderer, #more-text.ytd-comment-replies-renderer, #less-text.ytd-comment-replies-renderer
+        title-sub()
+        
+    #channel-container.ytd-c4-tabbed-header-renderer, #tabs-container.ytd-c4-tabbed-header-renderer, #channel-header.ytd-c4-tabbed-header-renderer, #tabs-inner-container.ytd-c4-tabbed-header-renderer
+        channel-banner()
+
     yt-formatted-string[has-link-only_]:not([force-default-style]) a.yt-simple-endpoint.yt-formatted-string
         link-visited()
         
@@ -121,3 +136,6 @@
 
     .yt-icon
         icon()
+
+    #simplebox-placeholder.ytd-comment-simplebox-renderer
+        placeholder()
