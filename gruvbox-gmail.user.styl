@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GruvBox - Gmail
 @namespace      github.com/Xedecimal/userstyles
-@version        1.1.5
+@version        1.1.6
 @description    Gmail... Gruvbox style.
 @preprocessor   stylus
 @author         Xedecimal
@@ -68,8 +68,17 @@
         color: color-notification
 
     search()
+        color: color-text-dark
         background: color-back-dark
+        
+    search-expanded()
+        search()
+        border: none
+        box-shadow: none
 
+    separator()
+        background-color: color-back-light
+        
     sidebar-hover()
         background: color-back-light
 
@@ -102,9 +111,15 @@
     .zE, .bqe, .zF, .bq3
         unread()
 
-    .gb_ne.gb_la
+    .gb_oe.gb_la, .gb_oe.gb_la .gb_Je:not(.gb_4e)::placeholder
         search()
 
+    .gb_oe.gb_la.gb_pe, .ZF-z6, .ZF-zT, .ZF-Av .lJ, .ZF-Av .lN, .dF .dG, .nr, .Ar, .boo .aQl>.J-JN-M-I-Jm, .boo .aaa>.J-JN-M-I-Jm, .boo .ZE>.J-JN-M-I-Jm, .bs1+.bs3, .btj+.aD, .gssb_e, .gssb_m, .gssb_e
+        search-expanded()
+        
+    .gssb_l
+        separator()
+        
     .Tm .ya, div.ajR
         notification()
     
@@ -126,7 +141,7 @@
     .x7
         mail-checked()
 
-    .ams.bkH::before, .ams.bkG::before, .asa, .qj, .bqX, .xY>.T-Jo, td.apU>.T-KT.aXw::before, .G-tF .T-Jo, .G-asx, .d-Na-J3.d-Na-JX-ax3.d-Na-hFsbo, .adj, .amI, .adk, .amJ, .aBS .d-Na-JX-I .d-Na-J3, .og.T-I-J3, .Xv.T-I.J-JN-M-I>.J-JN-M-I-JG, .aMZ.a3G, .a8X>.bAK, .dv, .bi4>.T-KT:not(.T-KT-Jp):not(.byM)::before, .hB, .mL, .g1, .gZ, .ajy>.ajz, div.ajR .ajT, .az2 .J-JN-M-I-JG, .ams.bkI::before
+    .ams.bkH::before, .ams.bkG::before, .asa, .qj, .bqX, .xY>.T-Jo, td.apU>.T-KT.aXw::before, .G-tF .T-Jo, .G-asx, .d-Na-J3.d-Na-JX-ax3.d-Na-hFsbo, .adj, .amI, .adk, .amJ, .aBS .d-Na-JX-I .d-Na-J3, .og.T-I-J3, .Xv.T-I.J-JN-M-I>.J-JN-M-I-JG, .aMZ.a3G, .a8X>.bAK, .dv, .bi4>.T-KT:not(.T-KT-Jp):not(.byM)::before, .hB, .mL, .g1, .gZ, .ajy>.ajz, div.ajR .ajT, .az2 .J-JN-M-I-JG, .ams.bkI::before, .T-axO .J-JN-M-I-JG, .bs5::after, .gsoi_0, .asor_o, .asor
         icon()
 
     .zA>.PE.PF::before
