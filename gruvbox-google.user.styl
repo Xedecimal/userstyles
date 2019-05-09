@@ -1,16 +1,15 @@
 /* ==UserStyle==
 @name           GruvBox - Google
 @namespace      github.com/Xedecimal/userstyles
-@version        1.0.2
+@version        1.0.3
 @description    Customizable Slack with some default gruvbox colors.
 @preprocessor   stylus
 @author         Xedecimal
-@license        WTFPL
 @updateURL      https://raw.githubusercontent.com/Xedecimal/userstyles/master/gruvbox-google.user.styl
 @homepageURL    https://github.com/Xedecimal/userstyles
 @var color color-text           "Text"                  #BDAE93
-@var color color-text-dark      "Text Dark"             #A89984
 @var color color-text-light     "Text Light"            #FBF1C7
+@var color color-text-dark      "Text Dark"             #928374
 @var color color-back           "Background"            #282828
 @var color color-back-dark      "Background Dark"       #1D2021
 @var color color-back-light     "Background Bright"     #3C3836
@@ -18,34 +17,67 @@
 @var color color-notification   "Notification"          #B8BB26
 
 ==/UserStyle== */
+
+body()
+    color: color-text
+    background: color-back
+
+icon()
+    filter: invert(1)
+    
+info()
+    color: color-text !important
+    
+link()
+    color: color-text-light !important
+    
+link-visited()
+    color: color-text-dark
+
+card()
+    background-color: color-back-dark
+    border-color: color-back-light
+
+search-input()
+    color: color-text
+    border: none;
+    
+search-flyout()
+    color: color-text-dark
+    background: color-back-dark
 @-moz-document domain("www.google.com")
     body, #hdtbSum, #appbar, .s, .s .st em, .st.s.std em, .eJ7tvc, #fbar
-        color: color-text
-        background: color-back
-    // Links
+        body()
+
     a:link, .w, #prs a:visited, #prs a:active, .q:active, .q:visited, .kl:active, .tbotu, a.fl:link, .fl a, .flt, a.flt, .gl a:link, a.mblink, .mblink b, .i3LlFf, .kno-ecr-pt, .w8qArf .fl
-        color: color-text-light !important
-    // Visited Links
+        link()
+
     .mblink:visited, a:visited
-        color: color-text-dark
+        link-visited()
+        
     // Cards
     .cv2VAd, .kp-blk, #fbar, .WwiUwd
-        background-color: color-back-dark
-        border-color: color-back-light
-    .gLFyf, .i29hTd .qLLird
-        color: color-text
-    .sbct:first-child .suggestions-inner-container, .RNNXgb
-        border: none;
+        card()
+
+    .gLFyf, .i29hTd .qLLird, .sbct:first-child .suggestions-inner-container, .RNNXgb
+        search-input()
+
     .aajZCb, .sbl1, .RNNXgb, .sbhl
-        color: color-text
-        background: color-back-dark
+        search-flyout()
+
     .minidiv .sfbg
         background: color-back-dark
+
     #hdtb
         border: none;
+
     // Arrow Down
     .GHDvEf, .GHDvEf:hover, .GHDvEf.selected, .GHDvEf.selected:hover
         background: color-back
+
     // Icons
     .gb_0b
-        filter: invert(1)
+        icon()
+
+    .vk_bk
+        info()
