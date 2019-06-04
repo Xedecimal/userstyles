@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GruvBox - Gmail
 @namespace      github.com/Xedecimal/userstyles
-@version        1.1.6
+@version        1.1.7
 @description    Gmail... Gruvbox style.
 @preprocessor   stylus
 @author         Xedecimal
@@ -19,6 +19,8 @@
 
 ==/UserStyle== */
 @-moz-document domain("mail.google.com")
+    account-button()
+        compose-inline()
     body()
         background: color-back
         color: color-text
@@ -111,11 +113,14 @@
     .zE, .bqe, .zF, .bq3
         unread()
 
-    .gb_oe.gb_la, .gb_oe.gb_la .gb_Je:not(.gb_4e)::placeholder
+    .gb_te
         search()
 
-    .gb_oe.gb_la.gb_pe, .ZF-z6, .ZF-zT, .ZF-Av .lJ, .ZF-Av .lN, .dF .dG, .nr, .Ar, .boo .aQl>.J-JN-M-I-Jm, .boo .aaa>.J-JN-M-I-Jm, .boo .ZE>.J-JN-M-I-Jm, .bs1+.bs3, .btj+.aD, .gssb_e, .gssb_m, .gssb_e
+    .gb_te.gb_ue .gb_Oe, .gssb_m, .gssb_e, .gb_te.gb_ue
         search-expanded()
+
+    .gb_fa
+        account-button()
         
     .gssb_l
         separator()
