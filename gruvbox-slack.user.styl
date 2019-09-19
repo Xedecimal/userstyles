@@ -22,16 +22,37 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans')
 
 @-moz-document domain("slack.com")
-    /* Generic */
-
-    body, .c-message__body, .p-message_pane .c-message_list.c-virtual_list--scrollbar>.c-scrollbar__hider, .p-message_pane .c-message_list:not(.c-virtual_list--scrollbar), .unread_empty_state
+    body()
         font-family: 'Open Sans'
         background: color-back
         color: color-text
+    
+    link()
+        color: color-text-light
+        
+    right-side()
+        background: color-back-dark
+        
+    message-forward()
+        color: color-text
+        
+    highlight()
+        color: color-notification
+
+    /* Generic */
+
+    body, .c-message__body, .p-message_pane .c-message_list.c-virtual_list--scrollbar>.c-scrollbar__hider, .p-message_pane .c-message_list:not(.c-virtual_list--scrollbar), .unread_empty_state
+        body()
 
     a, a:link, a:visited, .p-channel_sidebar__channel, .p-channel_sidebar__link, .p-channel_sidebar__channel:link, .p-channel_sidebar__link:link, .p-channel_sidebar__channel:visited, .p-channel_sidebar__link:visited, .p-channel_sidebar__channel:hover, .p-channel_sidebar__link:hover, .channel_title .channel_name
-        color: color-text-light
+        link()
 
+    .p-client
+        right-side()
+
+    .p-message_pane__foreword__description, .p-message_pane__limited_history_alert
+        message-forward()
+    
     // File meta info (above a posted image or such)
     
     .c-message_kit__file__meta
@@ -41,7 +62,7 @@
         border-color: color-back-light
         background: color-back-dark
         color: color-text-dark
-
+        
     /* Sidebar */
 
     [lang] .p-channel_sidebar:not(.p-channel_sidebar--global_nav):not(.p-channel_sidebar--classic_nav), .client_channels_list_container
@@ -59,10 +80,31 @@
         color: color-text
         border-bottom: 1px solid color-back-dark
 
+    /* Right Sidebar */
+    
+    .p-flexpane_header
+        background: color-back
+        color: color-text
+
+    .c-icon_button--light, .c-icon_button--light.c-button-unstyled, .c-icon_button--light:link
+        color: color-text-light
+    
+    .p-threads_flexpane__header_channel_name, .p-threads_flexpane__header_permalink:focus, .p-threads_flexpane__header_permalink:hover
+        color: color-text-light
+    
+    .p-threads_flexpane__separator_count
+        color: color-text
+    
+    .p-flexpane_header
+        border-bottom: color-back
+    
+    .p-threads_footer__input .p-message_input_field
+        background: color-back-light
+   
     /* Highlight */
 
     .p-channel_sidebar__channel--unread:not(.p-channel_sidebar__channel--muted):not(.p-channel_sidebar__channel--suggested):not(.p-channel_sidebar__channel--selected) .p-channel_sidebar__name, .p-channel_sidebar__link--unread:not(.p-channel_sidebar__link--selected) .p-channel_sidebar__name, .p-channel_sidebar__link--invites:not(.p-channel_sidebar__link--dim) .p-channel_sidebar__name, .p-channel_sidebar__section_heading_label--clickable:hover, .p-channel_sidebar__section_heading_label--unreads, .p-channel_sidebar__quickswitcher:hover
-        color: color-notification
+        highlight()
 
     /* Right Side */
 
@@ -127,6 +169,9 @@
         color: color-text
 
     /* Hover Colors */
+
+    .c-icon_button--light.c-button-unstyled:hover, .c-icon_button--light:hover, .c-icon_button--light:link:hover
+        color: color-text-light
 
     .c-message--focus:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight), .c-message--hover:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight), .c-message:hover:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight)
         background: color-back-light
