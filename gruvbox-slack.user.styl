@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GruvBox - Slack
 @namespace      github.com/Xedecimal/userstyles
-@version        1.0.6
+@version        1.0.7
 @description    Slack... Gruvbox style.
 @preprocessor   stylus
 @author         Xedecimal
@@ -83,6 +83,13 @@
         background: color-back-dark
         thread-border()
 
+    thread-separator()
+        color: color-notification
+        background: transparent
+        
+    thread-separator-line()
+        border-top: 1px dashed color-back-dark
+
     /* Generic */
 
     body, .c-message__body, .p-message_pane .c-message_list.c-virtual_list--scrollbar>.c-scrollbar__hider, .p-message_pane .c-message_list:not(.c-virtual_list--scrollbar), .unread_empty_state,
@@ -121,6 +128,12 @@
     .p_threads_view_load_older_button
         thread-read-more()
 
+    .p-threads_view__divider_label
+        thread-separator()
+        
+    .p-threads_view__divider_line
+        thread-separator-line()
+        
     .p-client
         right-side()
 
