@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GruvBox - Slack
 @namespace      github.com/Xedecimal/userstyles
-@version        1.0.5
+@version        1.0.6
 @description    Slack... Gruvbox style.
 @preprocessor   stylus
 @author         Xedecimal
@@ -27,11 +27,15 @@
         background: color-back
         color: color-text
         
+    text()
+        color: color-text
+        
     link()
-        color: color-text-light
+        color: color-text-light !important
         
     right-side()
         background: color-back-dark
+        color: color-text
         
     message-forward()
         color: color-text
@@ -64,13 +68,37 @@
     actions-button()
         color: color-text
 
+    thread-footer()
+        border-left: none
+        border-right: none
+        border-bottom-color: transparent
+        
+    thread-message()
+        background: color-back-dark
+        
+    thread-border()
+        border: none
+    
+    thread-read-more()
+        background: color-back-dark
+        thread-border()
+
     /* Generic */
 
-    body, .c-message__body, .p-message_pane .c-message_list.c-virtual_list--scrollbar>.c-scrollbar__hider, .p-message_pane .c-message_list:not(.c-virtual_list--scrollbar), .unread_empty_state
+    body, .c-message__body, .p-message_pane .c-message_list.c-virtual_list--scrollbar>.c-scrollbar__hider, .p-message_pane .c-message_list:not(.c-virtual_list--scrollbar), .unread_empty_state,
+    .p-threads_view
         body()
 
+    .p-classic_nav__model__title__info,
+    .p-classic_nav__model__button,
+    .p-classic_nav__right__search__placeholder,
+    .p-classic_nav__right__search__icon,
+    .p-classic_nav__channel_header__subtitle
+        text()
+            
     a, a:link, a:visited, .p-channel_sidebar__channel, .p-channel_sidebar__link, .p-channel_sidebar__channel:link, .p-channel_sidebar__link:link, .p-channel_sidebar__channel:visited, .p-channel_sidebar__link:visited, .p-channel_sidebar__channel:hover, .p-channel_sidebar__link:hover, .channel_title .channel_name,
-    .c-link--button, .c-button--outline-primary:link, .c-button--outline-primary:visited
+    .c-link--button, .c-button--outline-primary:link, .c-button--outline-primary:visited,
+    .p-threads_view_header__permalink
         link()
             
     .c-button--outline-primary
@@ -78,7 +106,21 @@
             
     .c-button--disabled
         button-disabled()
-            
+
+    .p-threads_view__default_background
+        thread-message()
+        
+    .p-threads_view_root,
+    .p-threads_view_reply
+        thread-border()
+        
+    .p-threads_view__footer
+        thread-footer()
+        
+    .p_threads_view_load_newer_button,
+    .p_threads_view_load_older_button
+        thread-read-more()
+
     .p-client
         right-side()
 
