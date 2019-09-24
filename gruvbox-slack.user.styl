@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GruvBox - Slack
 @namespace      github.com/Xedecimal/userstyles
-@version        1.0.7
+@version        1.0.8
 @description    Slack... Gruvbox style.
 @preprocessor   stylus
 @author         Xedecimal
@@ -68,6 +68,14 @@
     actions-button()
         color: color-text
 
+    input-message()
+        color: color-text
+        background: color-back-dark
+        border: none
+
+    input-message-placeholder()
+        color: #fff
+
     thread-footer()
         border-left: none
         border-right: none
@@ -93,14 +101,17 @@
     /* Generic */
 
     body, .c-message__body, .p-message_pane .c-message_list.c-virtual_list--scrollbar>.c-scrollbar__hider, .p-message_pane .c-message_list:not(.c-virtual_list--scrollbar), .unread_empty_state,
-    .p-threads_view
+    .p-threads_view,
+    .c-fullscreen_modal__content,
+    .c-fullscreen_modal__header
         body()
 
     .p-classic_nav__model__title__info,
     .p-classic_nav__model__button,
     .p-classic_nav__right__search__placeholder,
     .p-classic_nav__right__search__icon,
-    .p-classic_nav__channel_header__subtitle
+    .p-classic_nav__channel_header__subtitle,
+    .c-fullscreen_modal__body
         text()
             
     a, a:link, a:visited, .p-channel_sidebar__channel, .p-channel_sidebar__link, .p-channel_sidebar__channel:link, .p-channel_sidebar__link:link, .p-channel_sidebar__channel:visited, .p-channel_sidebar__link:visited, .p-channel_sidebar__channel:hover, .p-channel_sidebar__link:hover, .channel_title .channel_name,
@@ -270,9 +281,13 @@
         background: color-back-dark
         border: none
 
-    .p-workspace__input .p-message_input_field
-        color: color-text
-        background: color-back-dark
+    .ql-editor.ql-blank:before
+        input-message-placeholder()
+        
+    .p-workspace__input .p-message_input_field,
+    textarea.c-input_textarea,
+    .c-select_button
+        input-message()
     
     #msg_input
         border: none
