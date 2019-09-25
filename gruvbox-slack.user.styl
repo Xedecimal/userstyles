@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GruvBox - Slack
 @namespace      github.com/Xedecimal/userstyles
-@version        1.0.10
+@version        1.0.11
 @description    Slack... Gruvbox style.
 @preprocessor   stylus
 @author         Xedecimal
@@ -30,6 +30,9 @@
     text()
         color: color-text
         
+    text-muted()
+        color: color-text-dark
+        
     link()
         color: color-text-light !important
         
@@ -46,6 +49,9 @@
     icon()
         color: color-text-light
         
+    list-item()
+        box-shadow: 0 -1px 0 0 color-back-dark
+
     button()
         background: color-back-light
         border: none
@@ -116,9 +122,16 @@
     .p-classic_nav__channel_header__subtitle,
     .c-fullscreen_modal__body,
     .c-base_entity__metadata, .c-base_entity__subtext,
-    .p-channel_browser_section_header
+    .p-channel_browser_section_header,
+    .c-team__display-name, .c-unified_member__display-name, .c-usergroup__handle,
+    .p-dm_browser_modal__list_heading,
+    .p-dm_browser_modal__list_row_meta
         text()
-            
+        
+    .c-unified_member__secondary-name--medium,
+    .c-button--disabled
+        text-muted()
+
     a, a:link, a:visited, .p-channel_sidebar__channel, .p-channel_sidebar__link, .p-channel_sidebar__channel:link, .p-channel_sidebar__link:link, .p-channel_sidebar__channel:visited, .p-channel_sidebar__link:visited, .p-channel_sidebar__channel:hover, .p-channel_sidebar__link:hover, .channel_title .channel_name,
     .c-link--button, .c-button--outline-primary:link, .c-button--outline-primary:visited,
     .p-threads_view_header__permalink
@@ -203,7 +216,13 @@
     .p-channel_sidebar__jumper
         background: color-back-dark
         border: 1px solid color-back-light
-    
+
+    .p-channel_browser_list_item,
+    .p-channel_browser_list_item:not(.p-channel_browser_list_item--disabled):not(.p-channel_browser_list_item--disconnected):active,
+    .p-channel_browser_list_item:not(.p-channel_browser_list_item--disabled):not(.p-channel_browser_list_item--disconnected):focus,
+    .p-channel_browser_list_item:not(.p-channel_browser_list_item--disabled):not(.p-channel_browser_list_item--disconnected):hover
+        list-item()
+        
     #team_menu, #team_menu_user
         color: color-text
         border-bottom: 1px solid color-back-dark
