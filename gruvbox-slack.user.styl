@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GruvBox - Slack
 @namespace      github.com/Xedecimal/userstyles
-@version        1.0.8
+@version        1.0.9
 @description    Slack... Gruvbox style.
 @preprocessor   stylus
 @author         Xedecimal
@@ -42,6 +42,9 @@
         
     highlight()
         color: color-notification
+        
+    icon()
+        color: color-text-light
         
     button()
         background: color-back-light
@@ -111,7 +114,9 @@
     .p-classic_nav__right__search__placeholder,
     .p-classic_nav__right__search__icon,
     .p-classic_nav__channel_header__subtitle,
-    .c-fullscreen_modal__body
+    .c-fullscreen_modal__body,
+    .c-base_entity__metadata, .c-base_entity__subtext,
+    .p-channel_browser_section_header
         text()
             
     a, a:link, a:visited, .p-channel_sidebar__channel, .p-channel_sidebar__link, .p-channel_sidebar__channel:link, .p-channel_sidebar__link:link, .p-channel_sidebar__channel:visited, .p-channel_sidebar__link:visited, .p-channel_sidebar__channel:hover, .p-channel_sidebar__link:hover, .channel_title .channel_name,
@@ -209,8 +214,12 @@
         background: color-back
         color: color-text
 
-    .c-icon_button--light, .c-icon_button--light.c-button-unstyled, .c-icon_button--light:link
-        color: color-text-light
+    .c-icon_button--light,
+    .c-icon_button--light.c-button-unstyled,
+    .c-icon_button--light:link,
+    .p-channel_browser_list_item__member_count,
+    .p-channel_browser_list_item__preview
+        icon()
     
     .p-threads_flexpane__header_channel_name, .p-threads_flexpane__header_permalink:focus, .p-threads_flexpane__header_permalink:hover
         color: color-text-light
