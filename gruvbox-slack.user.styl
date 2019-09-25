@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GruvBox - Slack
 @namespace      github.com/Xedecimal/userstyles
-@version        1.0.9
+@version        1.0.10
 @description    Slack... Gruvbox style.
 @preprocessor   stylus
 @author         Xedecimal
@@ -77,7 +77,7 @@
         border: none
 
     input-message-placeholder()
-        color: #fff
+        color: color-text-dark
 
     thread-footer()
         border-left: none
@@ -218,7 +218,8 @@
     .c-icon_button--light.c-button-unstyled,
     .c-icon_button--light:link,
     .p-channel_browser_list_item__member_count,
-    .p-channel_browser_list_item__preview
+    .p-channel_browser_list_item__preview,
+    .p-threads_footer__input .p-message_input_file_button
         icon()
     
     .p-threads_flexpane__header_channel_name, .p-threads_flexpane__header_permalink:focus, .p-threads_flexpane__header_permalink:hover
@@ -290,7 +291,8 @@
         background: color-back-dark
         border: none
 
-    .ql-editor.ql-blank:before
+    .ql-editor.ql-blank:before,
+    .c-texty_input .ql-placeholder
         input-message-placeholder()
         
     .p-workspace__input .p-message_input_field,
