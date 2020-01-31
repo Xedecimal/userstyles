@@ -1,0 +1,282 @@
+/* ==UserStyle==
+@name           GruvBox - Github
+@namespace      github.com/Xedecimal/userstyles
+@version        1.0.0
+@description    Github... Gruvbox style.
+@preprocessor   stylus
+@author         Xedecimal
+@license        WTFPL
+@updateURL      https://raw.githubusercontent.com/Xedecimal/userstyles/master/gruvbox-github.user.styl
+@homepageURL    https://github.com/Xedecimal/userstyles
+@var color text           "Text"                  #BDAE93
+@var color text-dark      "Text Dark"             #A89984
+@var color text-light     "Text Light"            #FBF1C7
+@var color back           "Background"            #282828
+@var color back-dark      "Background Dark"       #1D2021
+@var color back-light     "Background Bright"     #3C3836
+@var color red            "Red"                   #FB4934
+@var color green          "Green"                 #B8BB26
+@var color blue           "Blue"                  #83a598
+@var color yellow         "Yellow"                #d79921
+@var color neutral-blue   "Neutral Blue"          #458588
+@var color faded-blue     "Faded Blue"            #076678
+==/UserStyle== */
+@-moz-document regexp("https://gecgithub01.walmart.com.*")
+  syntax-string()
+    color: green
+
+  syntax-operator()
+    color: green
+    
+  syntax-name()
+    color: green
+    
+  syntax-variable()
+    color: blue
+    
+  syntax-keyword()
+    color: red
+
+  syntax-function()
+    color: yellow
+
+  body
+    background: back
+    color: text
+
+  a, .btn-link, .reponav-item, .link-gray:hover
+    color: text-light !important
+
+  kbd
+    color: text
+    background: back-dark
+    border: none
+    box-shadow: none
+    
+  .gh-header-meta
+    color: text
+    
+  .reponav-item .Counter, .text-emphasized
+    color: text
+    
+  .btn, .social-count
+    color: text
+    background: back-light
+
+  .link-gray-dark, .link-gray
+    color: text !important
+    
+  .repohead.experiment-repo-nav
+    background: back
+    border-bottom: 1px solid back-light
+
+  .flash-warn
+    background: back-dark
+
+  .overall-summary, .repository-lang-stats-graph
+    border: none
+    border-radius: 0
+    
+  .Counter
+    color: text-dark
+    
+  .Box, table.files
+    background: back-light
+    border: none
+
+  table.files tr.navigation-focus td, table.files tr[aria-selected=true] td
+    background: back-dark
+
+  table.files tr.up-tree
+    border: none
+    
+  table.files td.age
+    color: text-dark
+    
+  .file-wrap
+    border: none
+
+  .commit-ref
+    background: back-dark
+
+  .commit-ref a
+    color: text-dark !important
+    
+  .discussion-item-icon
+    border-color: back-light
+    
+  .commit-icon .octicon
+    background: back
+    
+  .discussion-timeline-actions, .timeline-comment-header, .branch-action-body, .discussion-item-icon, .new-discussion-timeline .previewable-comment-form .comment-form-head.tabnav, .tabnav-tab.selected, .tabnav-tab[aria-selected=true]
+    background: back
+
+  .timeline-comment-header
+    color: text
+    border-color: back-dark
+    
+  .timeline-comment-wrapper
+    border: none
+    
+  .timeline-comment
+    border: none
+    background: back-dark
+    
+  .gh-header .gh-header-sticky.is-stuck+.gh-header-shadow
+    background: back-dark
+    
+  .thread-subscription-status
+    background: inherit
+    
+  .discussion-sidebar-heading
+    color: text
+    
+  .bg-gray-light
+    background: back-dark !important
+    
+  .drag-and-drop, .form-control, .form-select
+    background: inherit
+    border: none
+    
+  .btn-primary.disabled, .btn-primary:disabled
+    background: faded-green
+    
+  .discussion-sidebar-item
+    color: text-dark
+    
+  .Box-header, .commit-tease, table.files td, .gh-header
+    background: inherit
+    border: none
+
+  .Box-body
+    border: none
+
+  .Box-row
+    border: none
+    
+  .Box-row--focus-gray.navigation-focus
+    background: back-dark
+    
+  .Box-row:first-of-type
+    border: none
+
+  .reponav-item.selected
+    background: back-light
+    border-left: none
+    border-right: none
+    
+  .border-top
+    border-top: 1px solid back-dark !important
+    
+  .text-gray, .text-gray-light, .text-gray-dark
+    color: text-dark !important
+
+  .bg-blue-light
+    background-color: back-dark !important
+
+  .btn-octicon, .octicon
+    color: text !important
+    
+  .avatar
+    opacity: .25
+    
+  .subnav-item
+    border: none
+
+  .bg-white
+    background: back-light !important
+    
+  .team-left-column.border-right
+    border-right: none !important
+    
+  .py-3.border-bottom
+    border-bottom: none !important
+    
+  .branch-name
+    background: back-dark
+    color: text
+    
+  .bg-gray
+    background: back !important
+    
+  .form-control, .form-select
+    border: none
+    
+  .markdown-body .highlight pre, .markdown-body pre, .input-contrast
+    background: back-dark
+    
+  // Pull Request
+
+  .pr-toolbar
+    background: back
+    
+  .tabnav-pr, .tabnav-pr .tabnav-tab.selected
+    border-color: back-light
+    
+  // Diff
+  
+  .diffbar
+    background: inherit
+  
+  .file
+    border: none
+    
+  .file-header
+    background: back-dark
+    border: none
+
+  .blob-num-expandable, .blob-num-hunk, .blob-code-hunk
+    background: inherit
+    
+  .file-diff-split .blob-code+.blob-num
+    border-color: back
+    
+  // Deletion
+    
+  .blob-num-deletion
+    background: #442929
+    color: text-dark
+  
+  .blob-code-deletion
+    background: #442929
+    
+  .blob-code-deletion .x
+    background: hsl(0, 25%, 33%)
+    color: inherit
+    
+  // Addition
+
+  .blob-num-addition
+    background: #294436
+    color: text-dark
+  
+  .blob-code-addition
+    background: #294436
+  
+  .blob-code-addition .x
+    background: hsl(149, 25%, 26%)
+    color: inherit
+    
+  .file-diff-split .empty-cell
+    background: back-light
+
+  // Syntax
+
+  .pl-pds, .pl-s, .pl-s .pl-pse .pl-s1, .pl-sr, .pl-sr .pl-cce, .pl-sr .pl-sra, .pl-sr .pl-sre
+    syntax-string()
+  
+  // Operator
+  .blob-code-inner
+    syntax-operator()
+
+  .pl-s .pl-s1, .pl-smi
+    syntax-name()
+    
+  .pl-c1, .pl-s .pl-v
+    syntax-variable()
+    
+  .pl-k
+    syntax-keyword()
+    
+  .pl-e, .pl-en
+    syntax-function()
