@@ -56,6 +56,25 @@
   .markdown-body hr
     background: back-dark
 
+  // Conversation
+
+  .TimelineItem-body
+    color: inherit
+  
+  .timeline-comment.current-user .timeline-comment-header
+    background: inherit
+    border: none
+    
+  .review-comment
+    color: inherit
+    
+  .review-thread-reply
+    background: back-dark
+    border: none
+    
+  .border-bottom
+    border-bottom-color: back-dark !important
+    
   // Markdown / Tables
 
   .markdown-body table tr
@@ -65,6 +84,18 @@
   .commit-tease
     color: text-dark
   
+  .full-commit
+    background: back-light
+    
+  .full-commit p.commit-title
+    color: inherit
+    
+  .full-commit .commit-meta
+    background: back-dark
+
+  .text-blue
+    color: inherit !important
+    
   .markdown-body table tr:nth-child(2n)
     background: back-light
     
@@ -164,7 +195,13 @@
     
   .btn-primary.disabled, .btn-primary:disabled
     background: faded-green
+
+  .btn-outline:disabled
+    color: text-dark
     
+  .full-commit .btn-outline, .full-commit .btn-outline:disabled
+    background: back-dark
+
   .discussion-sidebar-item
     color: text-dark
     
