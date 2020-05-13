@@ -21,323 +21,333 @@
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans')
 
-@-moz-document domain("slack.com")
-    body()
-        font-family: 'Open Sans'
-        background: color-back
-        color: color-text
-        
-    text()
-        color: color-text
-        
-    text-muted()
-        color: color-text-dark
-        
+@-moz-document regexp(".*app.slack.com/.*")
+  body()
+      font-family: 'Open Sans'
+      background: color-back
+      color: color-text
+
+  text()
+      color: color-text
+
+  text-muted()
+      color: color-text-dark
+
+  link()
+      color: color-text-light !important
+
+  right-side()
+      background: color-back-dark
+      color: color-text
+
+  message-forward()
+      color: color-text
+
+  highlight()
+      color: color-notification
+
+  icon()
+      color: color-text-light
+
+  list-item()
+      box-shadow: 0 -1px 0 0 color-back-dark
+
+  button()
+      background: color-back-light
+      border: none
+      color: color-text
+
+  button-disabled()
+      background: color-back-light
+
+  button-focused()
+      color: color-text
+
+  replies-hover()
+      background: color-back-dark
+
+  reset()
+      color: color-text
+      background: inherit
+
+  actions-container()
+      background: color-back-light
+      color: color-text
+
+  actions-button()
+      color: color-text
+
+  input-message()
+      color: color-text
+      background: color-back-dark
+      border: none
+
+  input-message-placeholder()
+      color: color-text-dark
+
+  thread-footer()
+      border-left: none
+      border-right: none
+      border-bottom-color: transparent
+
+  thread-message()
+      background: color-back-dark
+
+  thread-border()
+      border: none
+
+  thread-read-more()
+      background: color-back-dark
+      thread-border()
+
+  thread-separator()
+      color: color-notification
+      background: transparent
+
+  thread-separator-line()
+      border-top: 1px dashed color-back-dark
+
+  /* Generic */
+
+  body, .c-message__body, .p-message_pane .c-message_list.c-virtual_list--scrollbar>.c-scrollbar__hider, .p-message_pane .c-message_list:not(.c-virtual_list--scrollbar), .unread_empty_state,
+  .p-threads_view,
+  .c-fullscreen_modal__content,
+  .c-fullscreen_modal__header
+      body()
+
+  .p-classic_nav__model__title__info,
+  .p-classic_nav__model__button,
+  .p-classic_nav__right__search__placeholder,
+  .p-classic_nav__right__search__icon,
+  .p-classic_nav__channel_header__subtitle,
+  .c-fullscreen_modal__body,
+  .c-base_entity__metadata, .c-base_entity__subtext,
+  .p-channel_browser_section_header,
+  .c-team__display-name, .c-unified_member__display-name, .c-usergroup__handle,
+  .p-dm_browser_modal__list_heading,
+  .p-dm_browser_modal__list_row_meta
+      text()
+
+  .c-unified_member__secondary-name--medium,
+  .c-button--disabled
+      text-muted()
+
+  .p-channel_sidebar__channel,
+  .p-channel_sidebar__link,
+  .p-channel_sidebar__channel:link,
+  .p-channel_sidebar__link:link,
+  .p-channel_sidebar__channel:visited,
+  .p-channel_sidebar__link:visited,
+  .p-channel_sidebar__channel:hover,
+  .p-channel_sidebar__link:hover,
+  .channel_title .channel_name,
+  .c-link--button,
+  .c-button--outline-primary:link,
+  .c-button--outline-primary:visited,
+  .p-threads_view_header__permalink
     link()
-        color: color-text-light !important
-        
-    right-side()
-        background: color-back-dark
-        color: color-text
-        
-    message-forward()
-        color: color-text
-        
-    highlight()
-        color: color-notification
-        
-    icon()
-        color: color-text-light
-        
-    list-item()
-        box-shadow: 0 -1px 0 0 color-back-dark
 
-    button()
-        background: color-back-light
-        border: none
-        color: color-text
-        
-    button-disabled()
-        background: color-back-light
-        
-    button-focused()
-        color: color-text
-    
-    replies-hover()
-        background: color-back-dark
-        
-    reset()
-        color: color-text
-        background: inherit
-        
-    actions-container()
-        background: color-back-light
-        color: color-text
-        
-    actions-button()
-        color: color-text
+  .c-button--outline-primary
+      button()
 
-    input-message()
-        color: color-text
-        background: color-back-dark
-        border: none
+  .c-button--disabled
+      button-disabled()
 
-    input-message-placeholder()
-        color: color-text-dark
+  .p-threads_view__default_background
+      thread-message()
 
-    thread-footer()
-        border-left: none
-        border-right: none
-        border-bottom-color: transparent
-        
-    thread-message()
-        background: color-back-dark
-        
-    thread-border()
-        border: none
-    
-    thread-read-more()
-        background: color-back-dark
-        thread-border()
+  .p-threads_view_root,
+  .p-threads_view_reply
+      thread-border()
 
-    thread-separator()
-        color: color-notification
-        background: transparent
-        
-    thread-separator-line()
-        border-top: 1px dashed color-back-dark
+  .p-threads_view__footer
+      thread-footer()
 
-    /* Generic */
+  .p_threads_view_load_newer_button,
+  .p_threads_view_load_older_button
+      thread-read-more()
 
-    body, .c-message__body, .p-message_pane .c-message_list.c-virtual_list--scrollbar>.c-scrollbar__hider, .p-message_pane .c-message_list:not(.c-virtual_list--scrollbar), .unread_empty_state,
-    .p-threads_view,
-    .c-fullscreen_modal__content,
-    .c-fullscreen_modal__header
-        body()
+  .p-threads_view__divider_label
+      thread-separator()
 
-    .p-classic_nav__model__title__info,
-    .p-classic_nav__model__button,
-    .p-classic_nav__right__search__placeholder,
-    .p-classic_nav__right__search__icon,
-    .p-classic_nav__channel_header__subtitle,
-    .c-fullscreen_modal__body,
-    .c-base_entity__metadata, .c-base_entity__subtext,
-    .p-channel_browser_section_header,
-    .c-team__display-name, .c-unified_member__display-name, .c-usergroup__handle,
-    .p-dm_browser_modal__list_heading,
-    .p-dm_browser_modal__list_row_meta
-        text()
-        
-    .c-unified_member__secondary-name--medium,
-    .c-button--disabled
-        text-muted()
+  .p-threads_view__divider_line
+      thread-separator-line()
 
-    a, a:link, a:visited, .p-channel_sidebar__channel, .p-channel_sidebar__link, .p-channel_sidebar__channel:link, .p-channel_sidebar__link:link, .p-channel_sidebar__channel:visited, .p-channel_sidebar__link:visited, .p-channel_sidebar__channel:hover, .p-channel_sidebar__link:hover, .channel_title .channel_name,
-    .c-link--button, .c-button--outline-primary:link, .c-button--outline-primary:visited,
-    .p-threads_view_header__permalink
-        link()
-            
-    .c-button--outline-primary
-        button()
-            
-    .c-button--disabled
-        button-disabled()
+  .p-client
+      right-side()
 
-    .p-threads_view__default_background
-        thread-message()
-        
-    .p-threads_view_root,
-    .p-threads_view_reply
-        thread-border()
-        
-    .p-threads_view__footer
-        thread-footer()
-        
-    .p_threads_view_load_newer_button,
-    .p_threads_view_load_older_button
-        thread-read-more()
+  .p-message_pane__foreword__description, .p-message_pane__limited_history_alert
+      message-forward()
 
-    .p-threads_view__divider_label
-        thread-separator()
-        
-    .p-threads_view__divider_line
-        thread-separator-line()
-        
-    .p-client
-        right-side()
+  .p-workspace__input .p-message_input_field.focus~.p-message_input_file_button:not(:hover),
+  .c-texty_input.focus .c-texty_input__button
+      button-focused()
 
-    .p-message_pane__foreword__description, .p-message_pane__limited_history_alert
-        message-forward()
+  .c-message__reply_bar--focus, .c-message__reply_bar:hover
+      replies-hover()
 
-    .p-workspace__input .p-message_input_field.focus~.p-message_input_file_button:not(:hover),
-    .c-texty_input.focus .c-texty_input__button
-        button-focused()
+  .c-message__reply_bar--focus .c-message__reply_bar_view_thread, .c-message__reply_bar:hover .c-message__reply_bar_view_thread
+      reset()
 
-    .c-message__reply_bar--focus, .c-message__reply_bar:hover
-        replies-hover()
+  .c-message_actions__container
+      actions-container()
 
-    .c-message__reply_bar--focus .c-message__reply_bar_view_thread, .c-message__reply_bar:hover .c-message__reply_bar_view_thread
-        reset()
-        
-    .c-message_actions__container
-        actions-container()
-        
-    .c-message_actions__button
-        actions-button()
-        
-    .c-message_attachment__pretext
-        reset()
-        
-    // File meta info (above a posted image or such)
-    
-    .c-message_kit__file__meta
-        color: color-text-dark
-        
-    pre, code
-        border-color: color-back-light
-        background: color-back-dark
-        color: color-text-dark
-        
-    /* Sidebar */
+  .c-message_actions__button
+      actions-button()
 
-    [lang] .p-channel_sidebar:not(.p-channel_sidebar--global_nav):not(.p-channel_sidebar--classic_nav), .client_channels_list_container
-        background: color-back
+  .c-message_attachment__pretext
+      reset()
 
-    .p-channel_sidebar
-        color: color-text
-        
-    .c-unified_member__display-name--large, .c-unified_member__title--large
-        link()
-            
-    .c-app_badge, .c-app_label
-        reset()
+  // File meta info (above a posted image or such)
 
-    /* Jumper */
-    .p-channel_sidebar__jumper
-        background: color-back-dark
-        border: 1px solid color-back-light
+  .c-message_kit__file__meta
+      color: color-text-dark
 
-    .p-channel_browser_list_item,
-    .p-channel_browser_list_item:not(.p-channel_browser_list_item--disabled):not(.p-channel_browser_list_item--disconnected):active,
-    .p-channel_browser_list_item:not(.p-channel_browser_list_item--disabled):not(.p-channel_browser_list_item--disconnected):focus,
-    .p-channel_browser_list_item:not(.p-channel_browser_list_item--disabled):not(.p-channel_browser_list_item--disconnected):hover
-        list-item()
-        
-    #team_menu, #team_menu_user
-        color: color-text
-        border-bottom: 1px solid color-back-dark
+  pre, code
+      border-color: color-back-light
+      background: color-back-dark
+      color: color-text-dark
 
-    /* Right Sidebar */
-    
-    .p-flexpane_header
-        background: color-back
-        color: color-text
+  /* Sidebar */
 
-    .c-icon_button--light,
-    .c-icon_button--light.c-button-unstyled,
-    .c-icon_button--light:link,
-    .p-channel_browser_list_item__member_count,
-    .p-channel_browser_list_item__preview,
-    .p-threads_footer__input .p-message_input_file_button
-        icon()
-    
-    .p-threads_flexpane__header_channel_name, .p-threads_flexpane__header_permalink:focus, .p-threads_flexpane__header_permalink:hover
-        color: color-text-light
-    
-    .p-threads_flexpane__separator_count
-        color: color-text
-    
-    .p-flexpane_header
-        border-bottom: color-back
-    
-    .p-threads_footer__input .p-message_input_field
-        background: color-back-light
-   
-    /* Highlight */
+  [lang] .p-channel_sidebar:not(.p-channel_sidebar--global_nav):not(.p-channel_sidebar--classic_nav), .client_channels_list_container
+      background: color-back
 
-    .p-channel_sidebar__channel--unread:not(.p-channel_sidebar__channel--muted):not(.p-channel_sidebar__channel--suggested):not(.p-channel_sidebar__channel--selected) .p-channel_sidebar__name, .p-channel_sidebar__link--unread:not(.p-channel_sidebar__link--selected) .p-channel_sidebar__name, .p-channel_sidebar__link--invites:not(.p-channel_sidebar__link--dim) .p-channel_sidebar__name, .p-channel_sidebar__section_heading_label--clickable:hover, .p-channel_sidebar__section_heading_label--unreads, .p-channel_sidebar__quickswitcher:hover
-        highlight()
+  .p-channel_sidebar
+      color: color-text
 
-    /* Right Side */
+  .c-unified_member__display-name--large, .c-unified_member__title--large
+      link()
 
-    .channel_header, #edit_topic_inner:not(.cannot_edit_topic):before, .c-message_list__day_divider__label__pill
-        background: color-back-dark
-        color: color-text-dark
+  .c-app_badge, .c-app_label
+      reset()
 
-    .channel_title .channel_name button
-        color: color-text
+  /* Jumper */
+  .p-channel_sidebar__jumper
+      background: color-back-dark
+      border: 1px solid color-back-light
 
-    .p-message_pane .c-message_list.c-virtual_list--scrollbar>.c-scrollbar__hider:before, .p-message_pane .c-message_list:not(.c-virtual_list--scrollbar):before
-        background: color-back-dark
+  .p-channel_browser_list_item,
+  .p-channel_browser_list_item:not(.p-channel_browser_list_item--disabled):not(.p-channel_browser_list_item--disconnected):active,
+  .p-channel_browser_list_item:not(.p-channel_browser_list_item--disabled):not(.p-channel_browser_list_item--disconnected):focus,
+  .p-channel_browser_list_item:not(.p-channel_browser_list_item--disabled):not(.p-channel_browser_list_item--disconnected):hover
+      list-item()
 
-    .c-message_attachment
-        color: color-text
-    
-    .c-message_attachment__border
-        background-color: color-back-dark
-    
-    /* New Messages */
+  #team_menu, #team_menu_user
+      color: color-text
+      border-bottom: 1px solid color-back-dark
 
-    .c-message_list__unread_divider__separator, .c-message_list__day_divider__line
-        border-color: color-back-dark
+  /* Right Sidebar */
 
-    .c-message_list__unread_divider__label
-        color: color-text-dark
-        background: color-back-dark
+  .p-flexpane_header
+      background: color-back
+      color: color-text
 
-    /* Bot Message */
-    .c-message--ephemeral, .c-message--sli_highlight_negative,
-    .c-message--ephemeral, .c-message--ephemeral .c-message__body
-        background: color-back-dark
-    
-    /* Sender */
+  .c-icon_button--light,
+  .c-icon_button--light.c-button-unstyled,
+  .c-icon_button--light:link,
+  .p-channel_browser_list_item__member_count,
+  .p-channel_browser_list_item__preview,
+  .p-threads_footer__input .p-message_input_file_button
+      icon()
 
-    .c-message--light .c-message__sender .c-message__sender_link
-        color: color-text
+  .p-threads_flexpane__header_channel_name, .p-threads_flexpane__header_permalink:focus, .p-threads_flexpane__header_permalink:hover
+      color: color-text-light
 
-    /* Mention */
+  .p-threads_flexpane__separator_count
+      color: color-text
 
-    .c-member_slug--link, .c-mrkdwn__broadcast--mention, .c-mrkdwn__broadcast--mention:hover, .c-mrkdwn__highlight, .c-mrkdwn__mention, .c-mrkdwn__mention:hover, .c-mrkdwn__user_group--mention, .c-mrkdwn__user_group--mention:hover
-        background: color-back-light
+  .p-flexpane_header
+      border-bottom: color-back
 
-    /* Footer */
-    
-    footer
-        background: color-back
-        box-shadow: inset 1px 0 0 0 color-back-dark
+  .p-threads_footer__input .p-message_input_field
+      background: color-back-light
 
-    #primary_file_button
-        background: color-back-dark
-        border: none
+  /* Highlight */
 
-    .ql-editor.ql-blank:before,
-    .c-texty_input .ql-placeholder
-        input-message-placeholder()
-        
-    .p-workspace__input .p-message_input_field,
-    textarea.c-input_textarea,
-    .c-select_button
-        input-message()
-    
-    #msg_input
-        border: none
+  .p-channel_sidebar__channel--unread:not(.p-channel_sidebar__channel--muted):not(.p-channel_sidebar__channel--suggested):not(.p-channel_sidebar__channel--selected) .p-channel_sidebar__name, .p-channel_sidebar__link--unread:not(.p-channel_sidebar__link--selected) .p-channel_sidebar__name, .p-channel_sidebar__link--invites:not(.p-channel_sidebar__link--dim) .p-channel_sidebar__name, .p-channel_sidebar__section_heading_label--clickable:hover, .p-channel_sidebar__section_heading_label--unreads, .p-channel_sidebar__quickswitcher:hover
+      highlight()
 
-    .texty_legacy .ql-placeholder
-        color: color-text
+  /* Right Side */
 
-    /* Hover Colors */
+  .channel_header, #edit_topic_inner:not(.cannot_edit_topic):before, .c-message_list__day_divider__label__pill
+      background: color-back-dark
+      color: color-text-dark
 
-    .c-icon_button--light.c-button-unstyled:hover, .c-icon_button--light:hover, .c-icon_button--light:link:hover
-        color: color-text-light
+  .channel_title .channel_name button
+      color: color-text
 
-    .c-message--focus:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight), .c-message--hover:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight), .c-message:hover:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight)
-        background: color-back
+  .p-message_pane .c-message_list.c-virtual_list--scrollbar>.c-scrollbar__hider:before, .p-message_pane .c-message_list:not(.c-virtual_list--scrollbar):before
+      background: color-back-dark
 
-    /* Misc Stuff */
-    
-    /* Get rid of the borders... */
-    .channel_header, #col_messages, #client_body:not(.onboarding):not(.feature_global_nav_layout):before
-        box-shadow: inset 1px 0 0 0 color-back-dark
-    
-    #client_body:not(.onboarding):not(.feature_global_nav_layout):before
-        background: color-back-dark
+  .c-message_attachment
+      color: color-text
+
+  .c-message_attachment__border
+      background-color: color-back-dark
+
+  /* New Messages */
+
+  .c-message_list__unread_divider__separator, .c-message_list__day_divider__line
+      border-color: color-back-dark
+
+  .c-message_list__unread_divider__label
+      color: color-text-dark
+      background: color-back-dark
+
+  /* Bot Message */
+  .c-message--ephemeral, .c-message--sli_highlight_negative,
+  .c-message--ephemeral, .c-message--ephemeral .c-message__body
+      background: color-back-dark
+
+  /* Sender */
+
+  .c-message--light .c-message__sender .c-message__sender_link
+      color: color-text
+
+  /* Mention */
+
+  .c-member_slug--link, .c-mrkdwn__broadcast--mention, .c-mrkdwn__broadcast--mention:hover, .c-mrkdwn__highlight, .c-mrkdwn__mention, .c-mrkdwn__mention:hover, .c-mrkdwn__user_group--mention, .c-mrkdwn__user_group--mention:hover
+      background: color-back-light
+
+  /* Footer */
+
+  footer
+      background: color-back
+      box-shadow: inset 1px 0 0 0 color-back-dark
+
+  #primary_file_button
+      background: color-back-dark
+      border: none
+
+  .ql-editor.ql-blank:before,
+  .c-texty_input .ql-placeholder
+      input-message-placeholder()
+
+  .p-workspace__input .p-message_input_field,
+  textarea.c-input_textarea,
+  .c-select_button
+      input-message()
+
+  #msg_input
+      border: none
+
+  .texty_legacy .ql-placeholder
+      color: color-text
+
+  /* Hover Colors */
+
+  .c-icon_button--light.c-button-unstyled:hover, .c-icon_button--light:hover, .c-icon_button--light:link:hover
+      color: color-text-light
+
+  .c-message--focus:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight), .c-message--hover:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight), .c-message:hover:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight)
+      background: color-back
+
+  /* Misc Stuff */
+
+  /* Get rid of the borders... */
+  .channel_header, #col_messages, #client_body:not(.onboarding):not(.feature_global_nav_layout):before
+      box-shadow: inset 1px 0 0 0 color-back-dark
+
+  #client_body:not(.onboarding):not(.feature_global_nav_layout):before
+      background: color-back-dark
