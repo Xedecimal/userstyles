@@ -1,0 +1,201 @@
+/* ==UserStyle==
+@name           Gruvbox - Jira
+@namespace      github.com/Xedecimal/userstyles
+@version        1.0.0
+@description    Jira... Gruvbox style.
+@preprocessor   stylus
+@author         Xedecimal
+@license        WTFPL
+@updateURL      https://raw.githubusercontent.com/Xedecimal/userstyles/master/gruvbox-jira.user.styl
+@homepageURL    https://github.com/Xedecimal/userstyles
+@var color text           "Text"                  #BDAE93
+@var color text-dark      "Text Dark"             #A89984
+@var color text-light     "Text Light"            #FBF1C7
+@var color back           "Background"            #282828
+@var color back-dark      "Background Dark"       #1D2021
+@var color back-light     "Background Bright"     #3C3836
+@var color red            "Red"                   #FB4934
+@var color green          "Green"                 #B8BB26
+@var color blue           "Blue"                  #83a598
+@var color yellow         "Yellow"                #d79921
+@var color neutral-blue   "Neutral Blue"          #458588
+@var color faded-blue     "Faded Blue"            #076678
+==/UserStyle== */
+
+@-moz-document regexp(".*jira\\..*\\.com/.*")
+  reset()
+    color: inherit
+    background: inherit
+    box-shadow: none
+    border: none
+
+  body()
+    color: text
+    background: back-dark
+    
+  link()
+    color: text-light
+
+  icon()
+    color: text
+
+  announcement()
+    color: text-dark !important
+    background: back-light !important
+    
+  sidebar()
+    background: back-light
+    
+  sidebar-active()
+    background: back-light
+    
+  card()
+    color: inherit
+    background: back
+    border: none
+    
+  card-hover()
+    background: back-light
+    
+  card-active()
+    background: back-light
+    
+  card-grabber()
+    background: back-light !important
+
+  badge()
+    color: inherit
+    background: back-light
+    
+  #issue-content,
+  .aui-page-panel,
+  #ghx-pool,
+  .ghx-column-headers .ghx-column,
+  #ghx-column-header-group.ghx-fixed,
+  .ghx-column-headers .ghx-column, .ghx-columns .ghx-column
+  .ghx-issue.ghx-selected .ghx-end,
+  .ghx-column-headers h2,
+  .ghx-detail-contents,
+  dt.ghx-detail-term,
+  .ghx-detail-issue,
+  .issue-body-content .module>.mod-header>h1, .issue-body-content .module>.mod-header>h2, .issue-body-content .module>.mod-header>h3, .issue-body-content .module>.mod-header>h4, .issue-body-content .module>.mod-header>h5, .issue-body-content .module>.mod-header>h6,
+  #ghx-header h1, #ghx-header h2,
+  .ghx-swimlane-header:after,
+  .ghx-issue .ghx-end,
+  .ghx-detail-view.gh-editable-detail-view .ghx-detail-issue .ghx-fa,
+  .ghx-issue:hover .ghx-end, .ghx-issue.ghx-selected:hover .ghx-end, .ghx-issue.ghx-flagged:hover .ghx-end, .ghx-issue.ghx-flagged.ghx-selected:hover .ghx-end,
+  .ghx-sprint-meta .time,
+  .aui-button, a.aui-button, .aui-button:visited,
+  .aui-button .aui-icon,
+  .ghx-column-headers .ghx-column,
+  .property-list .item .name,
+  .item-details dl>dt,
+  #announcement-banner,
+  #ghx-plan, #ghx-work, #ghx-report-scrollarea,
+  .aui-sidebar .aui-sidebar-footer
+  .detail-reviews-container .comment .comment-container .comment-link, .detail-pullrequests-container .pullrequests-table tbody .comment .comment-container .comment-link, .detail-reviews-container .comment .comment-container .count, .detail-pullrequests-container .pullrequests-table tbody .comment .comment-container .count,
+  .jira-dialog .jira-dialog-heading h2,
+  table.aui>thead>tr>th
+    reset()
+    
+  body
+    body()
+     
+  a,
+  a:hover, a:focus, a:active,
+  .ghx-detail-view.gh-editable-detail-view .ghx-detail-issue .module.toggle-wrap .toggle-title,
+  .aui-button.aui-button-link
+    link()
+      
+  .aui-sidebar .aui-nav>li>.aui-nav-item>.aui-icon, .aui-sidebar-submenu .aui-nav>li>.aui-nav-item>.aui-icon,
+  .aui-navgroup-horizontal .aui-nav>li a, .aui-navgroup-vertical .aui-nav>li>a, .aui-nav-vertical>li>a,
+  .ghx-iconfont,
+  .aui-button.aui-button-subtle
+    icon()
+
+  .aui-header,
+  #ghx-column-headers,
+  .ghx-swimlane-header
+    background: back-light
+
+  .xray-project-icon,
+  .icon-sidebar-components,
+  .aui-sidebar .aui-sidebar-footer.aui-sidebar-footer>.aui-sidebar-toggle>.aui-icon,
+  .icon-sidebar-add-ons,
+  .aui-sidebar[aria-expanded="false"] .jira-navigation .collapsed-scope-filter-container.aui-sidebar-group-actions::after
+    filter: invert()
+
+  .aui-sidebar .aui-sidebar-wrapper,
+  .ghx-detail-nav-menu
+    sidebar()
+    
+  .ghx-detail-nav-item.ghx-selected
+    sidebar-active()
+    
+  // Agile
+  
+  .ghx-issue
+    card()
+    
+  .ghx-issue:hover,
+  .ghx-issue.ghx-selected:hover
+    card-hover()
+    
+  .ghx-issue.ghx-selected
+    card-active()
+    
+  .ghx-grabber
+    card-grabber()
+
+  aui-badge, .aui-badge
+    badge()
+    
+  #announcement-banner,
+  #announcement-banner > p
+    announcement()
+
+  // Backlog
+  
+  .ghx-backlog-container, #ghx-backlog, .ghx-sprint-info, .ghx-backlog-header .ghx-name, .ghx-backlog-header .ghx-sprint-goal, .ghx-issue-compact .ghx-end
+    reset()
+    
+  .ghx-issue-compact.ghx-selected, .ghx-issue-compact .ghx-selected-group, .ghx-issue-compact:hover .ghx-end, .ghx-issue-compact.ghx-selected:hover .ghx-end, .ghx-issue-compact.ghx-flagged:hover .ghx-end, .ghx-issue-compact.ghx-flagged.ghx-selected:hover .ghx-end
+    background: back-light
+
+  .ghx-issue-compact:hover
+    background: back-light
+    
+  .ghx-issue-compact
+    reset()
+    
+  .stuck
+    background: back
+    
+  // Labels
+  
+
+  // Modal
+
+  .jira-dialog
+    border-color: back-dark
+    background: back-light
+
+  .jira-dialog .buttons-container
+    border-top: 1px solid
+    
+  .jira-dialog .jira-dialog-heading,
+  table.aui>thead
+    border-bottom: 1px solid
+    
+  .jira-dialog .jira-dialog-heading,
+  .jira-dialog .jira-dialog-content,
+  .jira-dialog .buttons-container,
+  table.aui>tbody>tr, table.aui>tfoot>tr,
+  table.aui:not(.aui-table-list)>tbody>tr>th, table.aui:not(.aui-table-list)>tfoot>tr>th, table.aui:not(.aui-table-list)>tbody>tr>td, table.aui:not(.aui-table-list)>tfoot>tr>td
+  table.aui>tbody>tr:first-child>td, table.aui>tfoot>tr:first-child>td, table.aui>tbody>tr:first-child>th, table.aui>tfoot>tr:first-child>th
+    color: inherit
+    border-color: back-dark
+    background: inherit
+    
+  .aui-blanket
+    background: rgba(0, 0, 0, .75)
