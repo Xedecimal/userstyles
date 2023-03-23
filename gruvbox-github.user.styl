@@ -287,6 +287,19 @@
     background: back-dark
     border: none
 
+  tr.js-expandable-line
+      background-image:
+        linear-gradient(135deg, back-dark 50%, rgba(255,255,255,0) 50%),
+        linear-gradient(-135deg, back-dark 50%, rgba(255,255,255,0) 50%),
+        linear-gradient(45deg, back-dark 50%, rgba(255,255,255,0) 50%),
+        linear-gradient(-45deg, back-dark 50%, rgba(255,255,255,0) 50%);
+        
+      background-position: bottom center, bottom center, top center, top center;
+      background-size:
+        0.75rem 1rem, 0.75rem 0.75rem,
+        0.75rem 0.75rem, 0.75rem 0.75rem;
+      background-repeat: repeat-x;
+
   .blob-num-expandable, .blob-num-hunk, .blob-code-hunk
     background: inherit
     
