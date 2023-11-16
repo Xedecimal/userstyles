@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GruvBox - Github
 @namespace      github.com/Xedecimal/userstyles
-@version        1.0.2
+@version        1.0.1
 @description    Github... Gruvbox style.
 @preprocessor   stylus
 @author         Xedecimal
@@ -47,6 +47,19 @@
   a, .btn-link, .reponav-item, .link-gray:hover
     color: text-light !important
 
+  .btn-primary:hover, .btn-primary.hover, [open]>.btn-primary
+    color: text-light
+
+  .react-repos-overview-margin
+    margin-right: auto
+    
+  .container-xl
+  .container-lg
+    max-width: inherit
+    
+  .Box-sc-g0xbh4-0
+    max-width: inherit
+    
   kbd
     color: text
     background: back-dark
@@ -163,9 +176,12 @@
   .commit-icon .octicon
     background: back
     
-  .discussion-timeline-actions, .timeline-comment-header, .branch-action-body, .discussion-item-icon, .new-discussion-timeline .previewable-comment-form .comment-form-head.tabnav, .tabnav-tab.selected, .tabnav-tab[aria-selected=true]
+  .discussion-timeline-actions, .branch-action-body, .discussion-item-icon, .tabnav-tab.selected, .tabnav-tab[aria-selected=true]
     background: back
 
+  .branch-action-state-dirty .branch-action-body::before, .branch-action-state-closed-dirty .branch-action-body::before, .is-rebasing .branch-action-state-dirty-if-rebasing .branch-action-body::before
+    background: back-light
+    
   .timeline-comment-header
     color: text
     border-color: back-dark
@@ -238,10 +254,7 @@
 
   .btn-octicon, .octicon
     color: text !important
-    
-  .avatar
-    opacity: .25
-    
+   
   .subnav-item
     border: none
 
@@ -286,20 +299,7 @@
   .file-header
     background: back-dark
     border: none
-
-  tr.js-expandable-line
-      background-image:
-        linear-gradient(135deg, back-dark 50%, rgba(255,255,255,0) 50%),
-        linear-gradient(-135deg, back-dark 50%, rgba(255,255,255,0) 50%),
-        linear-gradient(45deg, back-dark 50%, rgba(255,255,255,0) 50%),
-        linear-gradient(-45deg, back-dark 50%, rgba(255,255,255,0) 50%);
-        
-      background-position: bottom center, bottom center, top center, top center;
-      background-size:
-        0.75rem 1rem, 0.75rem 0.75rem,
-        0.75rem 0.75rem, 0.75rem 0.75rem;
-      background-repeat: repeat-x;
-
+    
   .blob-num-expandable, .blob-num-hunk, .blob-code-hunk
     background: inherit
     
@@ -335,6 +335,9 @@
   .file-diff-split .empty-cell
     background: back-light
 
+  .btn-octicon, .octicon
+    color: text-light !important
+    
   // Syntax
 
   .pl-pds, .pl-s, .pl-s .pl-pse .pl-s1, .pl-sr, .pl-sr .pl-cce, .pl-sr .pl-sra, .pl-sr .pl-sre
@@ -359,4 +362,4 @@
   // Appearance
   
   .d-block path
-    fill: back-light
+    fill: text
